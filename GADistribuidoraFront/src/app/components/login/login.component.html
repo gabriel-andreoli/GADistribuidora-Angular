@@ -1,0 +1,23 @@
+<div class="login-box w-50 m-auto rounded-3 mt-5">
+    <div class="p-4 d-flex justify-content-center">
+        <form id="loginForm">
+            <fieldset>
+                <legend>Login</legend>
+
+                <div class="mb-3 text-start">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" id="email" name="email" placeholder="exemplo@gmail.com" class="form-control p-1" [(ngModel)]="loginDTO.email" required>
+                </div>
+
+                <div class="mb-3 text-start">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" id="senha" name="senha" class="form-control p-1" placeholder="Digite sua senha" [(ngModel)]="loginDTO.password" required>
+                </div>
+
+                <div id="mensagemErro" class="alert alert-danger" style="display:none;"></div>
+                
+                <button type="submit" class="btn btn-primary w-100 mt-4 p-2" (click)="login()">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
